@@ -1,6 +1,10 @@
 # go-git
-
 A customized github api with Go.
+<br>
+<br>
+![GoGitLogo!](go-git.png)
+
+
 
 ## Table of Contents
 
