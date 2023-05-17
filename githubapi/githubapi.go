@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"context"
 	"fmt"
+	"os"
 	"strconv"
 
 	"example.com/getpass"
@@ -40,7 +42,9 @@ func main() {
 	fmt.Print(`Enter your repo name:`)
 	fmt.Scan(&name)
 	fmt.Print(`Enter your repo's description:`)
-	fmt.Scan(&description)
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	description = scanner.Text()
 	fmt.Print(`Is your repo private?("true"/"false"):`)
 	fmt.Scan(&isPrivate)
 	isPrivateCheck,err := strconv.ParseBool(isPrivate)
